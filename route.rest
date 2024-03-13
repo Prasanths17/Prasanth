@@ -1,0 +1,32 @@
+POST http://localhost:3300/employeeInfo
+Content-Type: application/json
+
+{
+    "employee_id": 3,
+    "employee_name": "venkat",
+    "Address": "Valavanur",
+    "job_title": "web",
+    "city": "Villupuram",
+    "salary": 15000
+}
+
+###
+GET http://localhost:3300/employeeInfo/14
+
+###
+
+PUT http://localhost:3300/employeeInfo/3
+Content-Type: application/json
+
+{
+   
+    "Address": "Kuruku Santhu",
+    "city": "Dubai",
+    "salary": 25000
+}
+
+###
+
+DELETE http://localhost:3300/employeeInfo/8
+
+
