@@ -2,7 +2,7 @@ POST http://localhost:3300/employeeInfo
 Content-Type: application/json
 
 {
-    "employee_id": 3,
+    "employee_id": 7,
     "employee_name": "venkat",
     "Address": "Valavanur",
     "job_title": "web",
@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3300/employeeInfo/14
+GET http://localhost:3300/employeeInfo
 
 ###
 
@@ -27,6 +27,6 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3300/employeeInfo/8
+DELETE http://localhost:3300/employeeInfo/7
 
 
