@@ -5,6 +5,7 @@ const {createPool} = require('mysql2');
 const PORT = 3300;
 const app = express();
 
+
 const pool = createPool({
     host:"localhost",
     user:"root",
