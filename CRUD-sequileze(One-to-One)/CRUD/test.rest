@@ -1,0 +1,67 @@
+
+
+POST http://localhost:3000/employeeInfo
+Content-Type: application/json
+
+{
+    "namee": "Vasan",
+    "Addresss" : "TTF pit shop",
+    "job_titlee" : "Biker",
+    "salary" : 100000
+}
+
+###
+
+GET http://localhost:3000/employeeInfo
+
+###
+
+PUT http://localhost:3000/employeeInfo/2
+Content-Type: application/json
+
+{
+    "name": "kjugug",
+    "Address":"lilhkhg",
+    "job_title":"Saleugs khvvv",
+    "salary" : 10000
+
+}
+
+###
+DELETE http://localhost:3000/employeeInfo/6
+
+
+###
+###
+###
+###
+
+POST http://localhost:3000/users/employeeInfo
+Content-Type: application/json
+
+{
+    "name": "Vasan",
+    "Address" : "TTF pit shop",
+    "job_title" : "Biker",
+    "salary" : 100000
+}
+
+###
+
+GET http://localhost:3000/users/employeeInfo/
+
+###
+
+PUT http://localhost:3000/users/employeeInfo/2
+Content-Type: application/json
+
+{
+    "name": "kjugug",
+    "Address":"lilhkhg",
+    "job_title":"Saleugs khvvv",
+    "salary" : 10000000
+
+}
+
+###
+DELETE http://localhost:3000/users/employeeInfo/10
