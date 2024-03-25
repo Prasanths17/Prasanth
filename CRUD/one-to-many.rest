@@ -1,0 +1,60 @@
+###
+
+GET http://localhost:3000/customerInfo
+
+###
+
+GET http://localhost:3000/customerInfo/5
+
+###
+POST http://localhost:3000/customerInfo/mobile
+Content-Type: application/json 
+
+{
+    "name":"Gokul",
+    "Address" : "Chidambaram"
+}
+
+###
+
+Put http://localhost:3000/customerInfo/5
+Content-Type: application/json
+
+{
+    "Address" : "Medavakam",
+    "product_name" : "Computer"
+}
+
+###
+DELETE http://localhost:3000/customerInfo/2
+
+
+###
+###
+
+GET http://localhost:3000/productInfo
+
+###
+GET http://localhost:3000/productInfo/3
+
+###
+POST http://localhost:3000/productInfo
+Content-Type: application/json
+
+{
+    "product_name" : "AC"
+}
+
+
+###
+PUT http://localhost:3000/productInfo/5
+Content-Type: application/json
+
+{
+    "product_name" : "AirCooler"
+}
+
+
+###
+DELETE http://localhost:3000/productInfo/5
+

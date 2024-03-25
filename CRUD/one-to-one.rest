@@ -1,0 +1,76 @@
+###
+
+GET http://localhost:3000/employeeInfo
+
+###
+
+
+GET http://localhost:3000/employeeInfo/3
+
+###
+
+
+POST http://localhost:3000/employeeInfo
+Content-Type: application/json
+
+{
+    "name": "vasanth",
+    "Address" : "Aranthangi",
+    "job_title" : "QA",
+    "salary" : 40000
+}
+
+###
+PUT http://localhost:3000/employeeInfo/2
+Content-Type: application/json
+
+{
+    "name": "kjugug",
+    "Address":"lilhkhg",
+    "job_title":"Saleugs khvvv",
+    "salary" : 10000
+
+}
+
+###
+DELETE http://localhost:3000/employeeInfo/2
+
+
+###
+###
+###
+###
+
+POST http://localhost:3000/users/employeeInfo
+Content-Type: application/json
+
+{
+    "name": "yy",
+    "Address" : "TTF pit shop",
+    "job_title" : "Biker",
+    "salary" : 100000
+}
+
+###
+
+GET http://localhost:3000/users/employeeInfo
+
+###
+
+GET http://localhost:3000/users/employeeInfo/1
+
+###
+
+PUT http://localhost:3000/users/employeeInfo/7
+Content-Type: application/json
+
+{
+    "name": "kjugug",
+    "Address":"lilhkhg",
+    "job_title":"Saleugs khvvv",
+    "salary" : 10000000
+
+}
+
+###
+DELETE http://localhost:3000/users/employeeInfo/7

@@ -7,9 +7,10 @@ var router = express.Router();
 
 router.get('/customerInfo', async(req, res) =>{
   
-    try{const customer = await customerInfo.findAll({
-      include: productInfo
-    })
+    try{
+      const customer = await customerInfo.findAll({
+        include: productInfo
+      })
       .then( (data) => {
         res.json(data);
       })

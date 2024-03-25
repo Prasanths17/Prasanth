@@ -1,0 +1,88 @@
+###
+
+GET http://localhost:3000/customer
+
+###
+
+GET http://localhost:3000/customer/3
+
+###
+POST http://localhost:3000/customer
+Content-Type: application/json 
+
+{
+    "name":"vinoth",
+    "Address" : "Chennai",
+    "productArray" : [1,44,3,2,55,66]
+}
+
+###
+
+Put http://localhost:3000/customer/3
+Content-Type: application/json
+
+{
+    "Address" : "Medavakam"
+}
+
+###
+DELETE http://localhost:3000/customer/14
+
+
+###
+###
+###
+###
+###
+
+GET http://localhost:3000/product
+
+###
+GET http://localhost:3000/product/3
+
+###
+POST http://localhost:3000/product
+Content-Type: application/json
+
+{
+    "product_name" : "AC"
+}
+
+
+###
+PUT http://localhost:3000/product/8
+Content-Type: application/json
+
+{
+    "product_name" : "AirCooler"
+}
+
+
+###
+DELETE http://localhost:3000/product/5
+
+
+################################################################################
+
+GET http://localhost:3000/customerProduct
+###
+GET http://localhost:3000/customerProduct/3
+###
+POST http://localhost:3000/customerProduct
+Content-Type: application/json
+
+{
+    "customer_id" : 3,
+    "product_id"  : 4
+}
+###
+PUT http://localhost:3000/customerProduct/11
+Content-Type: application/json
+
+{
+    "customer_id" : 1,
+    "product_id" : 1
+}
+
+###
+DELETE http://localhost:3000/customerProduct/11
