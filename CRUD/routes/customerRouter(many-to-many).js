@@ -138,9 +138,9 @@ router.post('/customer', async (req, res) => {
 
     // If the length of productsExist is not equal to the length of productArray,
     // it means some products in productArray do not exist in the database
-    console.log(productsExist);
-    console.log(productsExist.length);
-    console.log(productArray.length);
+    // console.log(productsExist);
+    // console.log(productsExist.length);
+    // console.log(productArray.length);
     if (productsExist.length !== productArray.length) {
       const nonExistingProducts = productArray.filter(productId => !productsExist.some(product => product.product_id === productId));
       return res.status(404).send(`Requested products with productIds ${nonExistingProducts.join(', ')} are not available`);
@@ -155,7 +155,7 @@ router.post('/customer', async (req, res) => {
     // Insert the new customer into the database
     const createdCustomer = await customer.create(newCustomer);
 
-    // Retrieve the ID of the newly created customer
+    // Retrieving the id
     const customerID = createdCustomer.customer_id;
 
     // Map productArray to an array of objects with customer_id and product_id

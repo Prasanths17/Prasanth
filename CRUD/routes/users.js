@@ -49,7 +49,7 @@ router.post('/employeeInfo' , async (req,res) => {
       }
       const employee_id = pool.query(`select id from employeeInfo where name = ?`,[name]);
       console.log(employee_id);
-      return;
+      //return;
       pool.query(`insert into employeeSalary (salary,employee_id) values (?,?)`,[salary,employee_id] , (err,result) => {
           if(err){
               console.log(err);
