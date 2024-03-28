@@ -1,60 +1,60 @@
 ###
 
-GET http://localhost:3000/customerInfo
+GET http://localhost:3000/book
 
 ###
 
-GET http://localhost:3000/customerInfo/5
+GET http://localhost:3000/book/10
 
 ###
-POST http://localhost:3000/customerInfo/mobile
+POST http://localhost:3000/book
 Content-Type: application/json 
 
 {
-    "name":"Gokul",
-    "Address" : "Chidambaram"
+    "book_name":"Dark Moon",
+    "author_name" : "Akash"
 }
 
 ###
 
-Put http://localhost:3000/customerInfo/5
+Put http://localhost:3000/book/11
 Content-Type: application/json
 
 {
-    "Address" : "Medavakam",
-    "product_name" : "Computer"
+    "book_name" : "Harry Pottor"
 }
 
 ###
-DELETE http://localhost:3000/customerInfo/2
+DELETE http://localhost:3000/book/11
 
 
 ###
 ###
 
-GET http://localhost:3000/productInfo
+GET http://localhost:3000/author
 
 ###
-GET http://localhost:3000/productInfo/3
+GET http://localhost:3000/author/3
 
 ###
-POST http://localhost:3000/productInfo
+POST http://localhost:3000/author
 Content-Type: application/json
 
 {
-    "product_name" : "AC"
+    "author_name" : "Simon",
+    "book_name" : "Equip Well"
 }
 
 
 ###
-PUT http://localhost:3000/productInfo/5
+PUT http://localhost:3000/author/5
 Content-Type: application/json
 
 {
-    "product_name" : "AirCooler"
+    "author_name" : "samson"
 }
 
 
 ###
-DELETE http://localhost:3000/productInfo/5
+DELETE http://localhost:3000/author/18
 

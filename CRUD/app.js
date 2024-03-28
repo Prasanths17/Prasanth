@@ -6,16 +6,17 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 
-
+ 
 //var indexRouter = require('./routes/index');
 
 const router = require('./routes/route');  //-----------//
 const usersRouter = require('./routes/users');
-const customerRouter = require('./routes/customerRoute');
-const productRouter = require('./routes/productRoute');
-const customerManyToMany = require ('./routes/customerRouter(many-to-many)');
-const productManyToMany = require('./routes/productRouter(many-to-many)');
-const customerProductManyToMany = require ('./routes/customerProduct(many-to-many)');
+const bookRouter = require('./routes/bookRoute');
+const authorRouter = require('./routes/authorRoute');
+const customerManyToMany = require ('./routes/customerRouter');
+const productManyToMany = require('./routes/productRouter');
+const customerProductManyToMany = require ('./routes/customerProduct');
+const fileUploaderRouter = require('./routes/fileUploaderRoute')
 //const productInfo = require('./Models/productInfo');
 // const customerInfo = require('./Models/customerInfo');
  
@@ -39,14 +40,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-sequelize.sync();
+sequelize.sync({alter:true});
 app.use('/', router);
 app.use('/users', usersRouter);
-app.use('/' , customerRouter);
-app.use('/', productRouter);
+app.use('/' , bookRouter);
+app.use('/', authorRouter);
 app.use('/' , customerManyToMany);
 app.use('/' , productManyToMany);
 app.use('/' , customerProductManyToMany);
+app.use('/' , fileUploaderRouter);
 
 
 
