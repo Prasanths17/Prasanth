@@ -61,9 +61,9 @@ module.exports.updateAuthor = async(req,res) => {
 module.exports.deleteAuthor = async(req,res) => {
     try{
         const author_id = req.params.id;
-        const deletedBookRows = await book.destroy({
-            where : {author_id : author_id}
-        })
+        // const deletedBookRows = await book.destroy({
+        //     where : {author_id : author_id}
+        // })
 
         const deletedAuthorRows = await author.destroy({
             where : {author_id : author_id}

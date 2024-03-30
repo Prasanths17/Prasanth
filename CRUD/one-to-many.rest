@@ -4,15 +4,15 @@ GET http://localhost:3000/book
 
 ###
 
-GET http://localhost:3000/book/10
+GET http://localhost:3000/book/13
 
 ###
 POST http://localhost:3000/book
 Content-Type: application/json 
 
 {
-    "book_name":"Dark Moon",
-    "author_name" : "Akash"
+    "book_name":"Lost child",
+    "author_name" : "Mulk Raj Anand"
 }
 
 ###
@@ -56,5 +56,5 @@ Content-Type: application/json
 
 
 ###
-DELETE http://localhost:3000/author/18
+DELETE http://localhost:3000/author/12
 

@@ -15,8 +15,9 @@ const bookRouter = require('./routes/bookRoute');
 const authorRouter = require('./routes/authorRoute');
 const customerManyToMany = require ('./routes/customerRouter');
 const productManyToMany = require('./routes/productRouter');
-const customerProductManyToMany = require ('./routes/customerProduct');
+//const customerProductManyToMany = require ('./routes/customerProduct');
 const fileUploaderRouter = require('./routes/fileUploaderRoute')
+const authRouter = require ('./routes/authenticationRoute');
 //const productInfo = require('./Models/productInfo');
 // const customerInfo = require('./Models/customerInfo');
  
@@ -47,8 +48,9 @@ app.use('/' , bookRouter);
 app.use('/', authorRouter);
 app.use('/' , customerManyToMany);
 app.use('/' , productManyToMany);
-app.use('/' , customerProductManyToMany);
+//app.use('/' , customerProductManyToMany);
 app.use('/' , fileUploaderRouter);
+app.use('/' , authRouter);
 
 
 
