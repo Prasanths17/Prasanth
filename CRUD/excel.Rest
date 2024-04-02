@@ -1,0 +1,23 @@
+POST http://localhost:3000/write-excel
+Content-Type: application/json
+
+[
+    {"name": "John", "age": 30, "country": "USA"}, 
+    {"name": "Alice", "age": 25, "country": "Canada"}
+]
+
+###
+
+GET http://localhost:3000/read-excel
+
+###
+POST http://localhost:3000/xlsxWrite-excel
+Content-Type: application/json
+
+[
+    {"name": "hjk", "age": 30, "country": "USA"}, 
+    {"name": "hjkbnm", "age": 25, "country": "Canada"}
+]
+###
+
+GET http://localhost:3000/xlsxRead-excel

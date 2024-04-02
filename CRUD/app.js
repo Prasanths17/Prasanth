@@ -18,6 +18,7 @@ const productManyToMany = require('./routes/productRouter');
 //const customerProductManyToMany = require ('./routes/customerProduct');
 const fileUploaderRouter = require('./routes/fileUploaderRoute')
 const authRouter = require ('./routes/authenticationRoute');
+const excelRouter = require ('./routes/excelRoute');
 //const productInfo = require('./Models/productInfo');
 // const customerInfo = require('./Models/customerInfo');
  
@@ -51,6 +52,7 @@ app.use('/' , productManyToMany);
 //app.use('/' , customerProductManyToMany);
 app.use('/' , fileUploaderRouter);
 app.use('/' , authRouter);
+app.use('/' , excelRouter);
 
 
 
