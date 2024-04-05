@@ -6,7 +6,8 @@ var router = express.Router();
 const  {getAuthors,getAuthorById,insertAuthor,updateAuthor,deleteAuthor} = require('../Controllers/one-to-many/author.controller');
 const author = require('../Models/author');
 const book = require('../Models/book');
-const { newAuthorValidation } = require('../Controllers/one-to-many/authorBook.validation');
+const { newAuthorValidation } = require('../middlewares/one-to-many_middleware/authorValidation');
+
 
 router.get('/author' , getAuthors);
 
