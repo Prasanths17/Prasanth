@@ -42,7 +42,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-sequelize.sync({alter:true});
+sequelize.sync();
 app.use('/', router);
 app.use('/users', usersRouter);
 app.use('/' , bookRouter);

@@ -5,7 +5,7 @@ GET http://localhost:3000/employeeInfo
 ###
 
 
-GET http://localhost:3000/employeeInfo/6
+GET http://localhost:3000/employeeInfo/16
 
 ###
 
@@ -14,26 +14,25 @@ POST http://localhost:3000/employeeInfo
 Content-Type: application/json
  
 {
-    "name": "Arjun",
-    "Address" : "Palani",
+    "name": "Dheena",
+    "Address" : "Chidhambaram",
     "job_title" : "Data Analyst",
-    "salary" : 25000
+    "salary" : 40000
 }
 
 ###
-PUT http://localhost:3000/employeeInfo/6
+PUT http://localhost:3000/employeeInfo/16
 Content-Type: application/json
 
 {
-    "name": "kjugug",
-    "Address":"lilhkhg",
-    "job_title":"Saleugs khvvv",
-    "salary" : 10000
-
+    "name": "Dheena Dhayalan",
+    "Address":"Cuddalore",
+    "job_title":"Junior Engineer",
+    "salary" : 35000
 }
 
 ###
-DELETE http://localhost:3000/employeeInfo/6
+DELETE http://localhost:3000/employeeInfo/8
 
 
 ###
@@ -76,5 +75,3 @@ Content-Type: application/json
 DELETE http://localhost:3000/users/employeeInfo/7
 
 
-###
-GET  http://localhost:3000/page

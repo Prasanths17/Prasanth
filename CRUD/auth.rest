@@ -2,9 +2,9 @@ POST http://localhost:3000/register
 Content-Type: application/json
 
 {
-    "userName" : "Agilan",
-    "email" : "agil@gmail.com",
-    "password" : "agil2001"
+    "userName" : "h",
+    "email" : "kth@gmail.com",
+    "password" : "th2001"
 }
 
 ###
@@ -12,14 +12,15 @@ POST http://localhost:3000/login
 Content-Type: application/json
 
 {
-    "email" : "agil@gmail.com",
-    "password" : "agil2001"
+    "email" : "prasanth@gmail.com",
+    "password" : "prasanth2001"
 }
 
 ###
 GET http://localhost:3000/userInfo
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJlbWFpbCI6ImFnaWxAZ21haWwuY29tIiwiaWF0IjoxNzExNzgzODI2fQ.EuWKYlhcQ41uevzvbvFW80g4oW07Iz1D34S6Cw-IvxM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJlbWFpbCI6InByYXNhbnRoQGdtYWlsLmNvbSIsImlhdCI6MTcxMjIyNTE4M30.a_ygjVGsGcMQyQF--ULlhPZ0jUpJSkMho0-otk4qs2U
 
+###
 {
   "user_id": 1,
   "email": "arun@gmail.com",

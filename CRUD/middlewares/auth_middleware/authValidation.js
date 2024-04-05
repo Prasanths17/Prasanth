@@ -1,4 +1,5 @@
 const jwt = require ('jsonwebtoken');
+const { register_body_schema, login_body_schema } = require('../../Validations/Authentication-validation/auth.joiSchema');
 require('dotenv').config();
 
 module.exports.authenticateToken = async (req,res,next) => {
@@ -12,4 +13,22 @@ module.exports.authenticateToken = async (req,res,next) => {
         next();
     })
 
+}
+
+module.exports.registerValidation = (req,res,next) => {
+    const {error} = register_body_schema.validate(req.body);
+    if(error){
+        return res.json(error.message);
+    }else{
+        next();
+    }
+}
+
+module.exports.loginValidation = (req,res,next) => {
+    const {error} = login_body_schema.validate(req.body);
+    if(error){
+        return res.json(error.message);
+    }else{
+        next();
+    }
 }

@@ -27,7 +27,7 @@ module.exports.getEmployeeById = async(req,res) => {
                 id : inputID
             }
         });
-        console.log(employee);
+        //console.log(employee);
         if(employee === null){
             res.status(404).send(`Requested employee Id is invalid`);
             return;
@@ -44,7 +44,7 @@ module.exports.insertEmployee = async(req,res) => {
         const {name,Address,job_title,salary} = req.body;
         
 
-        await employeeInfo.create({
+        const data = await employeeInfo.create({
             name,
             Address,
             job_title,
@@ -54,7 +54,7 @@ module.exports.insertEmployee = async(req,res) => {
         })
         //console.log(dd);
 
-    res.status(200).send(`Employee Successfully inserted`);
+    res.status(200).json(data);
     }catch(err){
         res.status(500).send(err);
     }

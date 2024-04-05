@@ -28,9 +28,13 @@ module.exports.registeration = async(req,res) => {
             email
         } , process.env.ACCESS_TOKEN_SECRET)
 
-        newUser.token = token
+        //newUser.token = token
+        newUserDetails= {
+            ...newUser.dataValues,
+            token : token
+        }
 
-        res.status(201).json(newUser);
+        res.status(201).json(newUserDetails);
 
     }catch(err){
         res.status(500).send(err);
@@ -55,9 +59,13 @@ module.exports.loginUser = async (req,res) => {
         
         const token = jwt.sign({user_id : userData.id , email} , process.env.ACCESS_TOKEN_SECRET);
 
-        userData.token = token;
+        //userData.token = token;
+        userDetails= {
+            ...userData.dataValues,
+            token : token
+        }
 
-        return res.status(200).json(userData);
+        return res.status(200).json(userDetails);
 
 
     }catch(err){

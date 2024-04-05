@@ -42,16 +42,16 @@ module.exports.readExcelFile = async (req,res) => {
         res.status(500).send(err);
     }
 }
-async function writeExcel(data, filePath) {
-    const workbook = new ExcelJS.Workbook();
-    const worksheet = workbook.addWorksheet('Sheet1');
+// async function writeExcel(data, filePath) {
+//     const workbook = new ExcelJS.Workbook();
+//     const worksheet = workbook.addWorksheet('Sheet1');
 
-    data.forEach(row => {
-        worksheet.addRow(row);
-    });
+//     data.forEach(row => {
+//         worksheet.addRow(row);
+//     });
 
-    await workbook.xlsx.writeFile(filePath);
-}
+//     await workbook.xlsx.writeFile(filePath);
+// }
 
 module.exports.xlsxWriteFile = async (req,res) => {
     try{
