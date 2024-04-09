@@ -23,6 +23,8 @@ const excelRouter = require ('./routes/excelRoute');
 // const customerInfo = require('./Models/customerInfo');
  
 const sequelize = require('./Models/sequelizeConnection');
+const {task , crons_EXCEL_task} = require('./crons');
+const cronJob = require('./crons');
 
 var app = express();    //-------------//
 app.use(bodyParser.json());
@@ -55,8 +57,14 @@ app.use('/' , authRouter);
 app.use('/' , excelRouter);
 
 
-
-
+// task.start();
+//crons_EXCEL_task.start();
+crons_EXCEL_task.stop();
+ task.stop();
+cronJob.db_backup_mysqldump.stop();
+cronJob.db_backup.stop();
+cronJob.autoMailSender.stop();
+cronJob.db_backup_mysqldump.start();
 
 
 // // catch 404 and forward to error handler

@@ -29,7 +29,7 @@ describe.skip('getEmployees' , () => {
 })
 
 describe.skip('getEmployeeById' , () => {
-    it('to get all employees with salary' , async () => {
+    it('o get an employees by id with salary' , async () => {
         
             const res = await request(app).get('/employeeInfo/3');
             assert.strictEqual(res.status, 200);
@@ -82,9 +82,18 @@ describe.skip('updateEmployee' , () => {
     })
 })
 
-describe.skip('deleteEmployee' , () => {
-    it('to delete an employee' , async () => {
-        const res = await request(app).delete('/employeeInfo/10').expect(200);
+describe('deleteEmployee' , () => {
+    it.skip('to delete an employee' , async () => {
+        const res = await request(app).delete('/employeeInfo/14').expect(200);
         assert.strictEqual(res.text , `Employee details are successfully deleted`);
     })
+
+    it('to get an employees by id with salary' , async () => {
+        
+        const res = await request(app).get('/employeeInfo/14');
+        assert.strictEqual(res.status, 404);
+        assert.strictEqual(res.text , 'Requested employee Id is invalid');
+       
+    
+})
 })

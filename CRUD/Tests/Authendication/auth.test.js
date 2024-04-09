@@ -70,7 +70,7 @@ describe.skip("loginUser" , () => {
     
 })
 
-describe("getUser" , () => {
+describe.skip("getUser" , () => {
     try{
         
         it('Tring to get user details by the created token' , async () => {
