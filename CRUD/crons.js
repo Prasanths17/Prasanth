@@ -151,7 +151,7 @@ const sendEmail = async () => {
         service: 'gmail',
         auth: {
             user: 'prasanth1709001@gmail.com',
-            pass: 'mnjq ppcl bydg mzxs'
+            pass: ''
         }
     })
 
