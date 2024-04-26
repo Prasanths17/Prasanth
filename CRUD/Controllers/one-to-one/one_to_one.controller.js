@@ -41,6 +41,7 @@ module.exports.getEmployeeById = async(req,res) => {
 
 module.exports.insertEmployee = async(req,res) => {
     try{   
+        console.log(req.body);
         const {name,Address,job_title,salary} = req.body;
         
 

@@ -18,7 +18,7 @@ module.exports.upload = multer({storage : storage});
 module.exports.pageToUpload = (req,res) => {
     res.sendFile('C:/Users/prasanth/Desktop/Prasanth/CRUD/views/index.html');
 }
-/*__dirname+'../../views/index.html'*/ 
+
 module.exports.imageUpload = (req,res) => {
     if(!req.file){
         return res.status(400).send('No files were uploaded.');

@@ -75,3 +75,17 @@ Content-Type: application/json
 DELETE http://localhost:3000/users/employeeInfo/7
 
 
+###
+POST http://localhost:3000/upload
+Content-Type: multipart/form-data; boundary=--
+
+--
+Content-Disposition: form-data; name="image"; filename="hello.png"
+Content-Type: image/png
+
+@/C:/Users/prasanth/Pictures/wallpapers/hello.jpg
+--
+
+
+
+

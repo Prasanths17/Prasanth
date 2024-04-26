@@ -30,7 +30,7 @@ describe.skip('Registration' , () => {
             }
 
             const res = await request(app).post('/register').send(userDetails).expect(400);
-            assert.strictEqual(res.text , `User already exist`);
+            assert.strictEqual(res.text , `User already exist`);    
         })
     }catch(err){
         throw err;

@@ -29,7 +29,7 @@ describe.skip('getEmployees' , () => {
 })
 
 describe.skip('getEmployeeById' , () => {
-    it('o get an employees by id with salary' , async () => {
+    it('to get an employees by id with salary' , async () => {
         
             const res = await request(app).get('/employeeInfo/3');
             assert.strictEqual(res.status, 200);
@@ -93,7 +93,7 @@ describe('deleteEmployee' , () => {
         const res = await request(app).get('/employeeInfo/14');
         assert.strictEqual(res.status, 404);
         assert.strictEqual(res.text , 'Requested employee Id is invalid');
-       
+        
     
-})
+    })
 })

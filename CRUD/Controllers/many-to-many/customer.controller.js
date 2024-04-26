@@ -94,7 +94,7 @@ module.exports.updateCustomer = async(req,res) => {
         where : {customer_id : customer_Id}
       });
   
-      if (updatedcustomerInfoRows == 0 ) {
+      if (updatedcustomerInfoRows == 0) {
         console.log("Invalid id");
         res.status(404).send(`Invalid id or Same details are given for update`);
       } else {
